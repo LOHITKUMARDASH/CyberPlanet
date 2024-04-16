@@ -1,1 +1,7 @@
-.idea
+.idea/
+venv/
+media/
+cp_App/migrations
+cp_App/__pycache__
+CyperPlate/__pycache__/
+
