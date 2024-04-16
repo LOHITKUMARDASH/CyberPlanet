@@ -1,0 +1,496 @@
+
+/* cyrillic */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: url(jsotfont/92zPtBhPNqw79Ij1E865zBUv7myjJTVFNIg8mg.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: url(jsotfont/92zPtBhPNqw79Ij1E865zBUv7myjJTVPNIg8mg.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: url(jsotfont/92zPtBhPNqw79Ij1E865zBUv7myjJTVBNIg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #716c80;
+/*  font-family: 'Poppins', sans-serif;*/
+  font-family: 'Jost';
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  background: #fff;
+}
+body{
+  background-image: url(../images/wp3354910.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#myHeader {
+    z-index: 999;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 25px rgb(34 50 72 / 22%);
+}
+
+#logoutbtn{
+  color:#b4b4b4;
+}
+
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.cust-logo{
+  width: 150px;
+}
+.cust-card{
+  background: #fff0;
+  border: 2px solid #ffffff52;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-top: 10px;
+  box-shadow:-13px -10px 20px 1px rgb(0 0 0 / 73%);
+  display: block !important;
+}
+#example1_wrapper .row{
+  padding: 0 14px !important;
+}
+.custcard{
+    padding: 1rem 1rem;
+/*    background: rgb(255 255 255 / 15%);*/
+    /* border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+    overflow-y: auto;
+
+    /* background: linear-gradient(to left, #00000052, #ffffff00 ,#00000047), url(../images/face-recog-header.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.multi_select{
+  height: 85px;
+  overflow-y: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+
+.enterlist{
+    color:#fff;
+    padding: 4px 0px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    font-size: 2.5vw;
+    background: rgb(0 0 0 / 38%);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.enterlist .user_name_class {
+  text-transform: capitalize;
+}
+
+
+.enterlist .entr{
+  color: #51edac;
+}
+.enterlist .exit{
+  color: #ff4a4a;
+}
+
+/********************body scroll bar start*******************/
+.custcard {
+  --scrollbarBG:#fff;
+  --thumbBG: #747474;
+}
+.custcard::-webkit-scrollbar {
+  width: 2px;
+}
+.custcard {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.custcard::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.custcard::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 0px;
+  border: 0px solid var(--scrollbarBG);
+}
+/******************scroll bar end****************/
+.camerabtn .btn{
+    color: #c9c9c9;
+    margin-bottom: 8px;
+    background: linear-gradient(to bottom, #85838375, #68676752);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 0.6rem;
+}
+.camerabtn .btn:hover{
+ background:rgb(255 255 255 / 25%)
+}
+.fc-heading{
+  width: 80%;
+}
+.timedateday .date{
+  font-size: 1.4rem;
+  color:#ababab;
+}
+
+
+
+/*scanner effect css start*/
+
+ .mx {
+    position: relative;
+    overflow:hidden;
+  }
+
+  .rs {
+    position: absolute;
+    color: #ff0000;
+    font-size: 160px;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 100, 1);
+    animation: tx 2s infinite ease-in-out alternate;
+  }
+
+  .bc {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-image: radial-gradient(rgba(245, 2, 2, 1) 50%, rgba(245, 2, 2, 1) 45%, rgba(248, 2, 5, 1) 70%);
+    left: 0px;
+/*    top: calc(50% - 250px);*/
+    animation: gs 2s infinite ease-in-out alternate;
+    background: rgb(255 0 0 / 52%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  @keyframes gs {
+    0% {
+      top: 0px;
+      width: 100%;
+      height: 8px;
+    }
+
+    50% {
+      width: 100%;
+      height: 8px;
+    }
+
+    100% {
+      top: 96.5%;
+      width: 100%;
+      height: 8px;
+    }
+  }
+
+  @keyframes tx {
+    0% {
+      text-shadow: -70px 0 10px rgba(100, 0, 0, 1);
+    }
+
+    100% {
+      text-shadow: 100px 0 10px rgba(0, 0, 200, 1);
+    }
+  }
+/*scanner effect css end*/
+
+.custdatable label{
+  color: #cdcdcd;
+}
+.custdatable h5{
+  color: #fff;
+}
+.custdatable .form-control, .custdatable .form-select{
+    background: rgb(255 255 255 / 15%);
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+.custdatable .form-select option, .custom-select option{
+  color: #000;
+}
+
+
+.custdatable table thead tr th{
+  vertical-align: middle;
+  padding: 10px 20px;
+}
+ .custdatable table tbody tr td{
+  vertical-align: middle;
+  padding: 3px 20px;
+}
+.custdatable table thead tr{
+  border-bottom:1px solid #a5a5a5;
+}
+.custdatable .dataTables_info{
+  color: #e1e1e1;
+}
+
+.custdatable .page-item.disabled .page-link, .custdatable  .page-link{
+    color: #e5e5e5;
+    pointer-events: none;
+    background-color: #fff0;
+    border-color: #dee2e6;
+}
+.custdatable .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #787878;
+    border-color: #dee2e6;
+  }
+.custform{
+  padding: 25px;
+  background: rgb(255 255 255 / 15%);
+  color: #fff;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: -13px -10px 20px 1px rgb(0 0 0 / 73%);
+}
+
+.custform label{
+  color: #f1f1f1;
+}
+.custtblscrll{
+  overflow-y: auto;
+  height: 80vh;
+}
+
+.custtblscrll {
+  --scrollbarBG:#fff;
+  --thumbBG: #747474;
+}
+.custtblscrll::-webkit-scrollbar {
+  width: 2px;
+}
+.custtblscrll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.custtblscrll::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.custtblscrll::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 0px;
+  border: 0px solid var(--scrollbarBG);
+}
+.ctsfnt{
+  font-size: 1.5vw;
+  padding: 8px;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0px 3px 18px rgb(0 0 0 / 70%);
+  margin-top: 15px;
+  background: #0000008f;
+}
+.ctsfnt table thead tr th, .ctsfnt table tbody tr td {
+  color: #fff;
+}
+.btn-group .btn{
+  margin:2px;
+}
+.custtblentryData{
+ color: #51edac!important;
+}
+.custtblexitData{
+  color: #ff4a4a!important;;
+}
+/*sweet alert css start*/
+.swal2-modal{
+  background: rgb(21 21 21 / 56%)!important;
+  backdrop-filter: blur(5px)!important;
+  border-radius: 5px!important;
+  box-shadow: 0px -1px 20px 4px rgb(0 0 0 / 49%)!important;
+  border: 2px solid #ffffff52!important;
+
+}
+
+.swal2-modal .swal2-title, .swal2-modal .swal2-content{
+    color: #c6c6c6!important;
+}
+
+.swal2-success-circular-line-left, 
+.swal2-success-circular-line-right{
+  display: none!important;
+}
+/*sweet alert css start*/
+
+
+.cust-modal-bg{
+  background: rgb(21 21 21 / 56%)!important;
+  backdrop-filter: blur(5px)!important;
+  border-radius: 5px!important;
+  box-shadow: 0px -1px 20px 4px rgb(0 0 0 / 49%)!important;
+  border: 2px solid #ffffff52!important;
+  color:#fff;
+}
+.cust-modal-bg input, .cust-modal-bg select,
+.cust-modal-bg input:focus, .cust-modal-bg select:focus
+{
+  background: rgb(255 255 255 / 15%);
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+.cust-modal-bg select option{
+  color : #000000;
+}
+
+.modal-header {
+  border-bottom: 1px solid #666666;
+}
+.modal-footer{
+  border-top: 1px solid #666666;
+}
+
+.select2-container--default .select2-selection--multiple {
+  background: rgb(255 255 255 / 15%)!important;
+  color: #000!important;
+  backdrop-filter: blur(5px)!important;
+  border: 1px solid #ffffff6b!important;
+}
+.select2-container {
+  z-index: 9999;
+}
+
+.navbar-bg {
+  background: #fff0; 
+}
+.navbar {
+ border-bottom: 0;
+ box-shadow: 0 0 0rem 0 rgba(33, 37, 41, 0.1);
+}
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff url('ss-logo-circle.gif') 50% 50% no-repeat;
+  background-size: 200px 150px;
+}
+::-webkit-scrollbar {
+width: 6px;
+}
+
+::-webkit-scrollbar-track {
+background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background: #00000080;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #000000cc;
+}
+.navbar-expand .navbar-nav .nav-link{
+  text-transform: capitalize;
+}
+
+.sidebar-brand {
+  border-bottom: 1px solid #ffffff1f;
+  background: #496cc0;
+  padding: 10px 47px;
+}
+.sidebar-nav, .sidebar-link, a.sidebar-link {
+  background: #496cc0;
+}
+.sidebar-link, a.sidebar-link {
+  color: rgb(255 255 255);
+}
+.sidebar-item.active .sidebar-link:hover, .sidebar-link:hover, .sidebar-item.active > .sidebar-link {
+  background: linear-gradient( 90deg, rgb(38 78 169), rgb(38 78 169) 50%, transparent );
+  border-left-color: #ffffff;
+  color:#ffffff;
+}
+
+a{
+  text-decoration: none;
+}
+.cameraList{
+  padding: 25px;
+  background: rgb(255 255 255 / 15%);
+  color: #fff;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: 1px 0px 20px 1px rgb(0 0 0 / 55%);
+  margin-bottom: 20px;
+  font-family: 'Jost';
+}
+.cameraList:hover{
+  background: rgb(255 255 255 / 24%)
+}
+
+.cameraList .cameraImg{
+  width: 100%;
+}
+
+.cameraList .listCameraName{
+    font-family: 'Jost';
+    color: #efefef;
+    font-size: 1.7rem;
+    padding-left: 15px;
+}

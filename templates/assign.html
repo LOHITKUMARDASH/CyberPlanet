@@ -1,0 +1,126 @@
+{% include "header.html" %}
+{% load static %}
+
+<section class="row">
+     <div class="col-md-12">
+        <div class="card custdashcard">
+           <div class="card-body p-3">
+              <table id="example3" class="table table-hover my-0">
+                 <thead>
+                    <tr>
+                       <th style="width:30px;">#</th>
+                       <th>Ticket No.</th>
+                       <th>Customer Name</th>
+                       <th>Mobile No.</th>
+                       <th>Asset Type</th>
+                       <th>Assign To</th>
+                       <th>Status</th>
+                       <th>Action</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                     {% for cus in customer %}
+                    <tr>
+                       <td>{{cus.id}}</td>
+                       <td>CP00{{cus.id}}</td>
+                       <td>{{cus.name}}</td>
+                       <td>{{cus.mobile}}</td>
+                       <td>{{cus.assets_type}}</td>
+                       <td>{{cus.assign}}</td>
+                       <td>{{cus.status}}</td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-sm btn-primary" onclick="openNav('{{ cus.id }}', '{{ cus.name }}', '{{ cus.mobile }}', '{{ cus.assets_type }}', '{{ cus.problem }}', '{{ cus.assign }}', '{{ cus.spare }}', '{{ cus.estimated_cost }}',  '{{ cus.status }}')">Edit</button>
+                        </td>
+                    </tr>
+                     {% endfor %}
+                 </tbody>
+              </table>
+           </div>
+        </div>
+     </div>
+
+</section>
+
+
+<div id="mySidebars2" class="sidebars">
+   <div class="row p-3">
+      <div class="col-9 my-auto"><h5 class="card-title mb-0">Edit Consumer Details</h5></div>
+      <div class="col-3 text-right"><a href="javascript:void(0)" class="closebtns" onclick="closeNav()">×</a></div>
+   </div>
+   <form class="card-body p-2" method="post" action="{% url 'edit_assign' %}">{% csrf_token %}
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Customer Name</label>
+         <input type="text" id="edit_name" name="edit_name" class="form-control">
+         <input type="hidden" id="edit_id" name="edit_id" class="form-control">
+      </div>
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Mobile No.</label>
+         <input type="text" id="edit_mobile" name="edit_mobile" class="form-control">
+      </div>
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Assets Type</label>
+         <input type="text" id="edit_t_asset" name="edit_t_asset" class="form-control">
+      </div>
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Problem Statement</label>
+         <textarea id="edit_problem" name="edit_problem" class="form-control"></textarea>
+      </div>
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Spare Consume</label>
+         <textarea id="Spare" name="Spare" class="form-control"></textarea>
+      </div>
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Estimated Cost</label>
+         <input id="estimate_cost" name="estimate_cost" class="form-control">
+      </div>
+      <div class="form-group mb-2">
+         <label  class="col-form-label">Status</label>
+         <select class="form-select" id="edit_status" name="edit_status">
+            <option value="" > --select-- </option>
+            <option value="Assign">Assign</option>
+            <option value="Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+            <option value="Delivery">Delivery</option>
+          </select>
+      </div>
+      <div class="form-group text-center pt-2">
+         <button type="submit" class="btn btn-success">Update</button>
+      </div>
+   </form>
+</div>
+
+{% include "footer.html" %}
+<!-- data table 3 initilization start -->
+
+
+<script>
+function openNav(id, name, mobile, assets_type, problem, assign_to, spare, cost, status) {
+    $('#edit_id').val(id);
+    $('#edit_name').val(name);
+    $('#edit_mobile').val(mobile);
+    $('#edit_t_asset').val(assets_type);
+    $('#edit_problem').val(problem);
+    $('#Spare').val(spare);
+    $('#estimate_cost').val(cost);
+    $('#edit_status').val(status);
+  document.getElementById("mySidebars2").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebars2").style.width = "0";
+}
+</script> 
+
+
+<script type="text/javascript">
+  $(function () {
+    $("#example3").DataTable({
+      "responsive": true,
+      "lengthChange": true, 
+      "autoWidth": false,
+      // "scrollX": true,
+    })
+  });
+</script>
+<!-- data table 3 initilization start -->
+
