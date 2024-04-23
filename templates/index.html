@@ -33,7 +33,7 @@
                <label  class="col-form-label">Assign To <i class="text-danger">*</i></label>
                 <select class="form-select" id="assign_to" name="assign_to">
                   <option value="" selected> --select-- </option>
-                  {% for d in user %}
+                  {% for d in users %}
                      <option value="{{d.id}}">{{d.user_name}}</option>
                   {% endfor %}
                   <!-- <option value="Asuthosh">Asuthosh</option>
@@ -153,7 +153,7 @@
          <label  class="col-form-label">Assign To <i class="text-danger">*</i></label>
           <select class="form-select" id="edit_assign_to" name="edit_assign_to">
             <option value="" > --select-- </option>
-            {% for d in user %}
+            {% for d in users %}
             <option value="{{d.id}}">{{d.user_name}}</option>
             {% endfor %}
             <!-- <option value="Asuthosh">Asuthosh</option>

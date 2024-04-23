@@ -24,9 +24,12 @@ def login_view(request):
         pwd = request.POST.get('password')
         user = authenticate(request, email=e_mail, password=pwd)
         if user is not None:
-            if user.role == 'ADMIN' or user.role == 'STAFF':
+            if user.role == 'ADMIN':
                 auth_login(request, user)
                 return redirect('index')
+            elif user.role == 'STAFF':
+                auth_login(request, user)
+                return redirect('assign')
             else:
                 return render(request, "login.html")
     return render(request, "login.html")
@@ -40,7 +43,7 @@ def index(request):
     context = {}
     context["currentPage"] = "index"
     context["customer"] = customer.objects.all()
-    context["user"] = NewUser.objects.exclude(user_name__in=["super", "Lohit"])
+    context["users"] = NewUser.objects.exclude(user_name__in=["super", "Lohit"])
     try:
         if request.method == "POST":
             c_name = sanitizedata(request.POST.get('name'))
@@ -69,6 +72,7 @@ def index(request):
     except Exception as e:
         print(e)
     return render(request, "index.html", context)
+
 @login_required
 def edit_customer(request):
     context = {}
