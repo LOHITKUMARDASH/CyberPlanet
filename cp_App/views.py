@@ -130,7 +130,7 @@ def edit_assign(request):
             recipient_list = [customer.objects.get(id=ids).email]
             estimated_completion_date = customer.objects.get(id=ids).estimated_date
             assets = customer.objects.get(id=ids).assets_type
-            cc_list = ['lohitkumardash1996@gmail.com']
+            cc_list = ['lohitkumardash1996@gmail.com','cyberplanet.bpd@gmail.com']
 
             message = (
                     f"Dear {username},\n\n"
